@@ -7,5 +7,7 @@
   <name>primer artefacto creado con maven + eclipse + github</name>
   <modules>
   	<module>pruebas</module>
+  	<module>shoppingCart</module>
+  	<module>app-web</module>
   </modules>
 </project>
