@@ -9,5 +9,6 @@
   	<module>pruebas</module>
   	<module>shoppingCart</module>
   	<module>app-web</module>
+  	<module>pruebas_tp</module>
   </modules>
 </project>
