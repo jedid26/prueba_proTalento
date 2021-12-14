@@ -9,30 +9,30 @@ public class Notas {
 		int numEstudiantes = input.nextInt();
 		String [][] dataEstudiante = new String[numEstudiantes][4];
 		
-		for (int i = 0; i < numEstudiantes; i++) {
+		for (int i=0; i < numEstudiantes; i++) {
 			
-			System.out.println("Ingrese los datos del estudiante "+ i+1);
+			System.out.println("Ingrese los datos del estudiante "+ i);
 		
 			for (int j = 0; j < 4; j++) {
 				
 				int notas = 0;
 				float promedio = 0;
+				input.nextLine();
 				System.out.println("Nombre del estudiante: ");
-				dataEstudiante[numEstudiantes][0] = input.nextLine();
+				dataEstudiante[i][0] = input.next();
 				System.out.println("Apellido del estudiante: ");
-				dataEstudiante[numEstudiantes][1] = input.nextLine();
+				dataEstudiante[i][1] = input.next();
 				System.out.println("Número de examen: ");
-				dataEstudiante[numEstudiantes][2] = input.next();
+				dataEstudiante[i][2] = input.next();
 				
-				for (int j2 = 0; j2 < Integer.parseInt(dataEstudiante[numEstudiantes][2]); j2++) {
+				for (int j2 = 0; j2 < Integer.parseInt(dataEstudiante[i][2]); j2++) {
 					
-					System.out.println("Nota examen "+ j2+1 + ":");
+					System.out.println("Nota examen "+ j2 + ":");
 					int nota = input.nextInt();
 					notas = notas + nota;
 				}
-				promedio = notas/Integer.parseInt(dataEstudiante[numEstudiantes][2]);
-				dataEstudiante[numEstudiantes][3] = String.valueOf(promedio);
-				
+				promedio = notas/Integer.parseInt(dataEstudiante[i][2]);
+				dataEstudiante[i][3] = String.valueOf(promedio);
 			}
 		}
 			
