@@ -53,11 +53,14 @@ public class Menu {
 		switch(opt2) {
 			case 1:
 					System.out.println("Registrar nuevo");
-					
-					for (int i=0; i < Alumno.class.getDeclaredFields().length-1; i++) {
-						
+					System.out.println("Ingrese la cantidad de estudiantes a registrar: ");
+					int numEstudiantes = teclado.nextInt();
+					Alumno[] datos = new Alumno[numEstudiantes];
+					for (int i=0; i<numEstudiantes; i++) {
+						for (int j=0;j<2; j++) {
+							
+						}
 					}
-					
 					break;
 			case 2:
 					int filter;
