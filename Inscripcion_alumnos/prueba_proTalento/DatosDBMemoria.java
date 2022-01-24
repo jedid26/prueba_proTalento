@@ -5,8 +5,11 @@ public class DatosDBMemoria {
 	private Alumno[] alumnosData;
 	private Materia[] materiaData;
 	
-	public DatosDBMemoria(Alumno[] alumnosData, Materia[] materiaData) {
+	public DatosDBMemoria(Alumno[] alumnosData) {
 		this.alumnosData = alumnosData;
+	}
+	
+	public DatosDBMemoria(Materia[] materiaData) {
 		this.materiaData = materiaData;
 	}
 
