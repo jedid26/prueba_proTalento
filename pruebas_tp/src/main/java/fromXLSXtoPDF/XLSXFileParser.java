@@ -37,7 +37,7 @@ public class XLSXFileParser extends BaseFile implements IParser<Collection<Artic
 				Workbook workbook = new XSSFWorkbook(xlsxInputStream)
 			) {
 			
-			Sheet hojas = workbook.getSheetAt(0);
+			Sheet hojas = workbook.getSheetAt(1);
 			
 			//collection
 			Iterator<Row> filasDeLaHoja0 = hojas.iterator();
@@ -85,7 +85,7 @@ public class XLSXFileParser extends BaseFile implements IParser<Collection<Artic
 				articulo.setCodigo(valor);
 				break;
 			case 2:
-				Double valorD = celdaActual.getNumericCellValue();//valor de la celda actual  -> MONI000
+				Double valorD = celdaActual.getNumericCellValue();//valor de la celda actual  -> 24500
 				articulo.setPrecio(valorD);
 				break;
 			case 3:
