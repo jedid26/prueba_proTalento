@@ -7,13 +7,15 @@ import java.util.Set;
 
 public class Datos {
 	
-	public Set<String> ocupacion = new HashSet<String>();
+	public static Set<String> ocupaciones = new HashSet<String>();
 	public Map<String, Persona> personasRegistradas = new HashMap<String, Persona>();
 	
+	public static void cargarOcupaciones() {
+		ocupaciones.add("Estudia");
+		ocupaciones.add("Trabaja");
+	}
 	
 	public boolean registrarPersona(Persona nuevaPersona) {
-		ocupacion.add("Estudia");
-		ocupacion.add("Trabaja");
 		try {
 			personasRegistradas.put(nuevaPersona.getDocumento(), nuevaPersona);
 			return true;

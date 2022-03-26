@@ -1,4 +1,5 @@
-
+<%@page import="java.util.Iterator"%>
+<%@page import="models.Datos"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%> 
 
@@ -16,7 +17,7 @@
 
 	<div>
 	
-		<form action="/FormularioServlet" method="get">
+		<form action="/FormularioServlet" method="post">
 	
 		<label>Nombre</label>
 		<br>
@@ -33,17 +34,25 @@
 		<label>Ocupación</label>
 		<br>
 		<select name="ocupacion">
-				<option value="estudiante">Estudiante</option>
-				<option value="Trabaja">Estudiante</option>
+			<%
+				Datos.cargarOcupaciones();
+				Iterator<String> iterador = Datos.ocupaciones.iterator();
+				while(iterador.hasNext()){ 
+			%>
+				<option value=<%= iterador.toString()%>><%= iterador.toString()%></option>
+			<%
+				}
+			%>
 		</select>
 		<label>Edad</label>
 		<br>
 		<input type="number" name="edad">
 		<br>
-		<label>Fecha de nacimientoZ</label>
+		<label>Fecha de nacimiento</label>
 		<br>
 		<input type="date" name="fechaNacimiento">
-		<button>Enviar</button>
+		<br>
+		<input type="submit" value="Enviar">
 		
 	</form>
 	
