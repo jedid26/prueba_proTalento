@@ -17,19 +17,22 @@
 
 	<div>
 	
-		<form action="/FormularioServlet" method="post">
+		<form action="<%=request.getContextPath()%>/FormularioServlet" method="post">
 	
 		<label>Nombre</label>
 		<br>
 		<input type="text" name="nombre">
 		<br>
+		<br>
 		<label>Apellido</label>
 		<br>
 		<input type="text" name="apellido">
 		<br>
+		<br>
 		<label>Documento</label>
 		<br>
 		<input type="text" name="documento">
+		<br>
 		<br>
 		<label>Ocupación</label>
 		<br>
@@ -38,21 +41,26 @@
 				Datos.cargarOcupaciones();
 				Iterator<String> iterador = Datos.ocupaciones.iterator();
 				while(iterador.hasNext()){ 
+					String valor = iterador.next();
 			%>
-				<option value=<%= iterador.toString()%>><%= iterador.toString()%></option>
+				<option value=<%=valor%>><%=valor%></option>
 			<%
 				}
 			%>
 		</select>
+		<br>
+		<br>
 		<label>Edad</label>
 		<br>
 		<input type="number" name="edad">
+		<br>
 		<br>
 		<label>Fecha de nacimiento</label>
 		<br>
 		<input type="date" name="fechaNacimiento">
 		<br>
-		<input type="submit" value="Enviar">
+		<br>
+		<input type="submit" value="Registrar">
 		
 	</form>
 	
