@@ -8,7 +8,7 @@ import java.util.Set;
 public class Datos {
 	
 	public static Set<String> ocupaciones = new HashSet<String>();
-	public Map<String, Persona> personasRegistradas = new HashMap<String, Persona>();
+	public static Map<String, Persona> personasRegistradas = new HashMap<String, Persona>();
 	
 	public static void cargarOcupaciones() {
 		ocupaciones.add("Estudia");
@@ -24,7 +24,11 @@ public class Datos {
 			return false;
 		}	
 	}
-	
-	
+
+	//Getter de todas las personas registradas
+	public static Map<String, Persona> getPersonasRegistradas() {
+		return personasRegistradas;
+	}
+		
 	
 }

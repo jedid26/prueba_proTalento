@@ -52,7 +52,7 @@
 		<br>
 		<label>Edad</label>
 		<br>
-		<input type="number" name="edad">
+		<input type="text" name="edad">
 		<br>
 		<br>
 		<label>Fecha de nacimiento</label>
@@ -63,8 +63,12 @@
 		<input type="submit" value="Registrar">
 		
 	</form>
-	
 	</div>
-
+	<br>
+	<br>
+	<form action="<%=request.getContextPath()%>/ListadoServlet"
+	 	method="GET">
+		<input type="submit" value="Ver listado"/>
+	</form>
 </body>
 </html>

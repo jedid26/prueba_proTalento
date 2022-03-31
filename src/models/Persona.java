@@ -1,5 +1,6 @@
 package models;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Persona {
@@ -80,4 +81,10 @@ public class Persona {
 				+ ", ocupacion=" + ocupacion + ", fechaNacimiento=" + fechaNacimiento + "]";
 	}
 	
+	//Metodo de la clase
+	public String darFormatoFecha(Date fechaInput) {
+		SimpleDateFormat nuevoFormato = new SimpleDateFormat("dd/MM/yyyy");
+		String fechaOutput = nuevoFormato.format(fechaInput);
+		return fechaOutput;		
+	}
 }
