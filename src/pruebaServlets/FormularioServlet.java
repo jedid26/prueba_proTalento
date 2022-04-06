@@ -48,7 +48,7 @@ public class FormularioServlet extends HttpServlet {
 			//System.out.println("Key = " + entry.getKey());
 			String[] values = entry.getValue();
 			for (String val : values) {
-				if (val == "" || val == null) {
+				if (val == null || val.isEmpty()) {
 					//getServletContext().getRequestDispatcher("/error.jsp").forward(request, response);
 					response.sendRedirect(request.getContextPath()+"/jsp/formulario.jsp");
 				}
