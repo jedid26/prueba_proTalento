@@ -20,7 +20,7 @@
 			  		<div class="carousel-inner">
 			  				
 			  			<%
-			  				Object listObject = request.getAttribute("IMAGENES");
+			  				Object listObject = request.getAttribute("imagenes");
 			  			
 			  				List<ImgCarrousel> imagenes = (List<ImgCarrousel>)listObject;
 			  				

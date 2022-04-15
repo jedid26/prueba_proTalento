@@ -40,9 +40,9 @@ public class CarrouselServlet extends HttpServlet {
 			System.out.println("lista vacia");
 		}
 		
-		request.setAttribute("IMAGENES", listaImagenes);
+		request.setAttribute("imagenes", listaImagenes);
 		
-		getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
+		getServletContext().getRequestDispatcher("/jsp/index.jsp").forward(request, response);
 		
 	}
 
