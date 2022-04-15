@@ -34,8 +34,6 @@ public class ImgCarrouselDaoImpl implements ImgCarrouselDao {
 						String urlImagen 	= rs.getString("imagen");
 						String activoImagen = rs.getString("activo");
 						
-						System.out.println(rs.getString("descripcion"));
-						
 						ImgCarrousel imagen = new ImgCarrousel(Integer.valueOf(idImagen),descrImagen, urlImagen, Integer.valueOf(activoImagen) );
 						listaImagenes.add(imagen);
 					}
