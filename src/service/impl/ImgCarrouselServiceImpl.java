@@ -15,4 +15,5 @@ public class ImgCarrouselServiceImpl implements ImgCarrouselService {
 	public List<ImgCarrousel> findAll() {		
 		return dao.findAll();
 	}
+	
 }

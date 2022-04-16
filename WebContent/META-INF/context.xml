@@ -1,0 +1,15 @@
+<Context>
+
+	<Resource name="jdbc/practicaAdicional" auth="Container" type="javax.sql.DataSource"
+	
+				maxActive="15" maxIdle="3" maxWait="5000"
+				
+				username="root" password="root"
+				
+				driverClassName="com.mysql.jdb.Driver"
+				
+				url="jdbc:mysql://127.0.0.1:3306/practica-adicional-seman-15">
+				
+				</Resource>
+							
+</Context>
