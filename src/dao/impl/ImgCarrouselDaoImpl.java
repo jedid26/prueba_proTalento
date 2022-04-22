@@ -1,14 +1,21 @@
 package dao.impl;
 
+import java.io.CharArrayReader;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.SQLIntegrityConstraintViolationException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
 import dao.ImgCarrouselDao;
+import exceptions.DuplicatedException;
 import jdbc.AdministradorDeConexiones;
 import models.ImgCarrousel;
+import service.ImgCarrouselService;
+import service.impl.ImgCarrouselServiceImpl;
 
 public class ImgCarrouselDaoImpl implements ImgCarrouselDao {
 
@@ -46,5 +53,37 @@ public class ImgCarrouselDaoImpl implements ImgCarrouselDao {
 		}
 			
 		return listaImagenes;
+	}
+
+	@Override
+	public void updateImgById(ImgCarrousel newImg) throws DuplicatedException{
+		
+		String sql = "UPDATE carrousel SET descripcion=?, imagen=?, activo=? WHERE id=?";	
+		
+		try(Connection con = AdministradorDeConexiones.obtenerConexion();) {
+			
+			try(PreparedStatement st = con.prepareStatement(sql);) {
+				
+				st.setString(1, newImg.getDescripcion());
+				st.setString(2, newImg.getImagenUrl());
+				st.setInt(3, newImg.getActivo());
+				st.setInt(4, newImg.getId());
+				
+				st.execute();
+			}		
+		} catch (SQLException ex) {
+			if(ex instanceof SQLIntegrityConstraintViolationException) {
+				throw new DuplicatedException("No se ha podido actualizar " + sql, ex.getCause());
+			}
+		}
+		
+	}
+	
+	public static void main(String[] args) throws DuplicatedException {
+		ImgCarrouselService carrouselService = new ImgCarrouselServiceImpl();
+		
+		ImgCarrousel img1 = new ImgCarrousel(1, "Bosque con aurora en el cielo", "https://picsum.photos/id/724/700/500", 1);
+		
+		carrouselService.updateImgById(img1);
 	}
 }
