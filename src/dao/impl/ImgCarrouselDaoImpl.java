@@ -1,6 +1,5 @@
 package dao.impl;
 
-import java.io.CharArrayReader;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -56,7 +55,7 @@ public class ImgCarrouselDaoImpl implements ImgCarrouselDao {
 	}
 
 	@Override
-	public void updateImgById(ImgCarrousel newImg) throws DuplicatedException{
+	public void updateImgById(ImgCarrousel newImg){
 		
 		String sql = "UPDATE carrousel SET descripcion=?, imagen=?, activo=? WHERE id=?";	
 		
@@ -71,19 +70,9 @@ public class ImgCarrouselDaoImpl implements ImgCarrouselDao {
 				
 				st.execute();
 			}		
-		} catch (SQLException ex) {
-			if(ex instanceof SQLIntegrityConstraintViolationException) {
-				throw new DuplicatedException("No se ha podido actualizar " + sql, ex.getCause());
-			}
+		} catch (SQLException ex) {			
+			System.out.println("No se pudo actualizar "+ ex.getMessage());
+			ex.printStackTrace();
 		}
-		
-	}
-	
-	public static void main(String[] args) throws DuplicatedException {
-		ImgCarrouselService carrouselService = new ImgCarrouselServiceImpl();
-		
-		ImgCarrousel img1 = new ImgCarrousel(1, "Bosque con aurora en el cielo", "https://picsum.photos/id/724/700/500", 1);
-		
-		carrouselService.updateImgById(img1);
-	}
+	}	
 }

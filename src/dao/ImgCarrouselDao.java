@@ -9,6 +9,6 @@ public interface ImgCarrouselDao {
 	
 	public List<ImgCarrousel> findAll();
 	
-	public void updateImgById(ImgCarrousel newImg) throws DuplicatedException;
+	public void updateImgById(ImgCarrousel newImg);
 	
 }

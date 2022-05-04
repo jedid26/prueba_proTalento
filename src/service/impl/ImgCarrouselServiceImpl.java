@@ -4,7 +4,6 @@ import java.util.List;
 
 import dao.ImgCarrouselDao;
 import dao.impl.ImgCarrouselDaoImpl;
-import exceptions.DuplicatedException;
 import models.ImgCarrousel;
 import service.ImgCarrouselService;
 
@@ -18,7 +17,7 @@ public class ImgCarrouselServiceImpl implements ImgCarrouselService {
 	}
 
 	@Override
-	public void updateImgById(ImgCarrousel newImg) throws DuplicatedException {
+	public void updateImgById(ImgCarrousel newImg) {
 		dao.updateImgById(newImg);
 	}
 	
