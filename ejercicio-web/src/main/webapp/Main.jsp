@@ -14,13 +14,13 @@
 	<div class="container">
 		<div class="row">
 			<div class="col">
-				<button onclick="obtenerListado()" >Abrir Modal</button>
+				<button onclick="obtenerListado()">Abrir Modal</button>
 			</div>
 		</div>
 	</div>
 	
 	<!-- Modal Tablas -->
-	<div class="modal fade" id="tablasModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal fade" id="tablasModal" tabindex="-1" aria-labelledby="tablasModalLabel" aria-hidden="true">
 	  <div class="modal-dialog">
 	    <div class="modal-content">
 	      <div class="modal-header">
@@ -70,39 +70,31 @@
 	    </div>
 	  </div>
 	</div>
-	<!-- Modal Formulario -->
-	<div class="modal fade" id="formularioModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<!-- Modal Formulario Articulo -->
+	<div class="modal fade" id="formArtModal" tabindex="-1" aria-labelledby="formArtModalLabel" aria-hidden="true">
 	  <div class="modal-dialog">
 	    <div class="modal-content">
 	      <div class="modal-header">
-	        <h5 class="modal-title" id="formularioModalLabel"></h5>
+	        <h5 class="modal-title" id="formArtModalLabel"></h5>
 	        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 	      </div>
-	      <div class="modal-body">
-      		<form>
-				<div class="mb-3" id="divTitulo" hidden="">
-					<label for="tituloInput" class="form-label">Titulo</label>
-				   	<input type="text" class="form-control" id="tituloInput">
-			  	</div>
-			  	<div class="mb-3" id="divCodigo" hidden="">
-				  <label for="codigoInput" class="form-label">Codigo</label>
-				  <input type="text" class="form-control" id="codigoInput">
-			  	</div>
-			  	<div class="mb-3" id="divPrecio" hidden="">
-				  <label for="precioInput" class="form-label">Precio</label>
-				  <input type="text" class="form-control" id="precioInput">
-			  	</div>
-			  	<div class="mb-3" id="divStock" hidden="">
-				  <label for="stockInput" class="form-label">Stock</label>
-				  <input type="text" class="form-control" id="stockInput">
-			  	</div>
-			  	<div class="mb-3" id="divCodigo" hidden="">
-				  <label for="codigoInput" class="form-label">Codigo</label>
-				  <input type="text" class="form-control" id="codigoInput">
-			  	</div>
-			  	
-			  <button type="submit" class="btn btn-primary">Guardar</button>
-			</form>
+	      <div class="modal-body" id="artModalBody">
+      			<!-- Esto lo generá el JS -->
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	
+	<!-- Modal Formulario Categoria -->
+	<div class="modal fade" id="formCatgModal" tabindex="-1" aria-labelledby="formCatgModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="formCatgModalLabel"></h5>
+	        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+	      </div>
+	      <div class="modal-body" id="catgModalBody">
+      			<!-- Esto lo generá el JS -->
 	      </div>
 	    </div>
 	  </div>
