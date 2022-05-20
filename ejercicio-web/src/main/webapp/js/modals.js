@@ -64,7 +64,7 @@ function obtenerListado() {
 		      <td>${art.marcas_id}</td>
 		      <td>${art.categorias_id}</td>
 		      <td>
-			  	<button type="button" class="btn btn-info">Abrir modal</button>
+			  	<button type="button" class="btn btn-info" onclick="abrirFormulario(${art}) >Abrir modal</button>
 			  </td>	
 		    </tr>
 		`
@@ -81,9 +81,13 @@ function obtenerListado() {
 		      <td>${catg.codigo}</td>
 		      <td>${catg.habilitada}</td>
 		      <td>
-			  	<button type="button" class="btn btn-info">Abrir modal</button>
-			  </td>	
+			  	<button type="button" class="btn btn-info" onclick="abrirFormulario(${catg})" >Abrir modal</button>
+			  </td>
 		    </tr>
 		`
 	}
 };
+
+function abrirFormulario(object){
+	object.id;
+}
