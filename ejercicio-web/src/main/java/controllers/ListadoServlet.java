@@ -13,13 +13,13 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import ar.com.educacionit.domain.Categorias;
-import ar.com.educacionit.domain.Marcas;
-import ar.com.educacionit.services.CategoriaService;
-import ar.com.educacionit.services.MarcasService;
-import ar.com.educacionit.services.exceptions.ServiceException;
-import ar.com.educacionit.services.impl.CategoriaServiceImpl;
-import ar.com.educacionit.services.impl.MarcasServiceImpl;
+import domain.Categorias;
+import domain.Marcas;
+import services.CategoriaService;
+import services.MarcasService;
+import services.exceptions.ServiceException;
+import services.impl.CategoriaServiceImpl;
+import services.impl.MarcasServiceImpl;
 
 
 @WebServlet("/controllers/ListadoServlet")
