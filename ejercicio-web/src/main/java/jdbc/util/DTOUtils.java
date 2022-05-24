@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.StringTokenizer;
 
-import ar.com.educacionit.dao.exceptions.GenericException;
+import exceptions.GenericException;
 
 //import org.slf4j.LoggerFactory;
 

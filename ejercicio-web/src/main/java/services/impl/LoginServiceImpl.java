@@ -1,15 +1,15 @@
 package services.impl;
 
-import ar.com.educacionit.dao.SociosDao;
-import ar.com.educacionit.dao.UserDao;
-import ar.com.educacionit.dao.exceptions.GenericException;
-import ar.com.educacionit.dao.impl.SocioDaoImpl;
-import ar.com.educacionit.dao.impl.UserDaoImpl;
-import ar.com.educacionit.domain.Socios;
-import ar.com.educacionit.domain.Users;
-import ar.com.educacionit.services.LoginService;
-import ar.com.educacionit.services.exceptions.ServiceException;
 import at.favre.lib.crypto.bcrypt.BCrypt;
+import dao.SociosDao;
+import dao.UserDao;
+import exceptions.GenericException;
+import dao.impl.SocioDaoImpl;
+import dao.impl.UserDaoImpl;
+import domain.Socios;
+import domain.Users;
+import services.LoginService;
+import services.exceptions.ServiceException;
 
 public class LoginServiceImpl implements LoginService {
 
@@ -28,6 +28,7 @@ public class LoginServiceImpl implements LoginService {
 			
 			if(users != null) {
 				//valido password
+				
 				BCrypt.Result result = BCrypt.verifyer().verify(passwordFromHtml.getBytes(), users.getPassword().getBytes());				
 				if(!result.verified) {
 					throw new ServiceException("Usuario/Password incorrectos", null);

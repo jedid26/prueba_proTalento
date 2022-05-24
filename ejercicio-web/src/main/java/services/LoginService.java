@@ -1,7 +1,7 @@
 package services;
 
-import ar.com.educacionit.domain.Users;
-import ar.com.educacionit.services.exceptions.ServiceException;
+import domain.Users;
+import services.exceptions.ServiceException;
 
 public interface LoginService {
 

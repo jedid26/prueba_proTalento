@@ -1,7 +1,7 @@
 package dao.impl;
 
-import ar.com.educacionit.dao.ICrud;
-import ar.com.educacionit.domain.Socios;
+import dao.ICrud;
+import domain.Socios;
 
 public interface SocioSQLCustom extends ICrud {
 

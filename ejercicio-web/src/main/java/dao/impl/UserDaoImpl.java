@@ -5,11 +5,11 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.List;
 
-import ar.com.educacionit.dao.UserDao;
-import ar.com.educacionit.dao.exceptions.GenericException;
-import ar.com.educacionit.dao.jdbc.AdministradorDeConexiones;
-import ar.com.educacionit.dao.jdbc.util.DTOUtils;
-import ar.com.educacionit.domain.Users;
+import dao.UserDao;
+import exceptions.GenericException;
+import jdbc.AdministradorDeConexiones;
+import jdbc.util.DTOUtils;
+import domain.Users;
 
 public class UserDaoImpl implements UserDao {
 
