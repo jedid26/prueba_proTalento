@@ -79,7 +79,7 @@
 	        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 	      </div>
 	      <div class="modal-body" id="artModalBody">
-      			<!-- Esto lo generá el JS -->
+      			<!-- Esto lo generÃ¡ el JS -->
 	      </div>
 	    </div>
 	  </div>
@@ -94,7 +94,7 @@
 	        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 	      </div>
 	      <div class="modal-body" id="catgModalBody">
-      			<!-- Esto lo generá el JS -->
+      			<!-- Esto lo generÃ¡ el JS -->
 	      </div>
 	    </div>
 	  </div>
