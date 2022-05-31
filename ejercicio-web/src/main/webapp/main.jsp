@@ -79,6 +79,7 @@
 	        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 	      </div>
 	      <div class="modal-body" id="artModalBody">
+<<<<<<< HEAD
       			<!-- Esto lo gener� el JS -->
 	      </div>
 	    </div>
@@ -107,3 +108,33 @@
 <script src="./js/modals.js" type="text/javascript"></script>
 </body>
 </html>
+=======
+      			<!-- Esto lo generá el JS -->
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	
+	<!-- Modal Formulario Categoria -->
+	<div class="modal fade" id="formCatgModal" tabindex="-1" aria-labelledby="formCatgModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="formCatgModalLabel"></h5>
+	        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+	      </div>
+	      <div class="modal-body" id="catgModalBody">
+      			<!-- Esto lo generá el JS -->
+	      </div>
+	    </div>
+	  </div>
+	</div>
+<!-- AXIOS  -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<!-- Bootstrap JS  -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<!-- JS Propio -->
+<script src="./js/modals.js" type="text/javascript"></script>
+</body>
+</html>
+>>>>>>> branch 'practica_adicional_semana17' of https://github.com/jedid26/prueba_proTalento.git
